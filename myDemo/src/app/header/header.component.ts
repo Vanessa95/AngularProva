@@ -27,5 +27,4 @@ export class HeaderComponent implements OnInit {
     this.titolo = this.ls.getNome();
     this.conferma = this.ls.getConferma();
   }
-
 }

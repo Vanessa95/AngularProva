@@ -1,7 +1,7 @@
-export interface Compito {
+export class Persona {
     id: number;
-    titolo: string;
-    contenuto: string;
+    nome: string;
+    cognome: string;
     giudizio: boolean;
-    valutazione: number;
+    eta: number;
 }

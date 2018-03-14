@@ -15,6 +15,9 @@ export class HeaderComponent implements OnInit {
     this.titolo = 'ciao';
     this.conferma = true;
   }
+  modifica() {
+    this.conferma = false;
+  }
 
   ngOnInit() {
   }

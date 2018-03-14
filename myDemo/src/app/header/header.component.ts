@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeggereScrivereService } from '../service/leggere-scrivere.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
   conferma: boolean;
   array = [];
 
-  constructor() {
+  constructor( private ls: LeggereScrivereService) {
     this.id = 1;
     this.titolo = 'ciao';
     this.conferma = true;
@@ -22,6 +23,9 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.id = this.ls.getEta();
+    this.titolo = this.ls.getNome();
+    this.conferma = this.ls.getConferma();
   }
 
 }

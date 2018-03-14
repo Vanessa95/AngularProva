@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeggereScrivereService } from '../service/leggere-scrivere.service';
+import { Persona } from '../model/classe';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,7 @@ export class HeaderComponent implements OnInit {
   titolo: string;
   conferma: boolean;
   array = [];
+  dePersona: Persona;
 
   constructor(private ls: LeggereScrivereService) {
     this.id = 1;
@@ -26,5 +28,6 @@ export class HeaderComponent implements OnInit {
     this.id = this.ls.getEta();
     this.titolo = this.ls.getNome();
     this.conferma = this.ls.getConferma();
+    this.dePersona = this.ls.getPersona();
   }
 }

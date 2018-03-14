@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   conferma: boolean;
   array = [];
 
-  constructor( private ls: LeggereScrivereService) {
+  constructor(private ls: LeggereScrivereService) {
     this.id = 1;
     this.titolo = 'ciao';
     this.conferma = true;

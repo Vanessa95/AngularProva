@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { LeggereScrivereService } from './service/leggere-scrivere.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LeggereScrivereService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

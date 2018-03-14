@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { LeggereScrivereService } from './service/leggere-scrivere.service';
+import { BodyComponent } from './body/body.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

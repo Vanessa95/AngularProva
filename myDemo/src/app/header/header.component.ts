@@ -28,6 +28,6 @@ export class HeaderComponent implements OnInit {
     this.id = this.ls.getEta();
     this.titolo = this.ls.getNome();
     this.conferma = this.ls.getConferma();
-    this.dePersona = this.ls.getPersona();
+    this.ls.getPersona().subscribe(persona => this.dePersona = persona);
   }
 }

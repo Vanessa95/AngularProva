@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Persona } from '../model/classe';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class LeggereScrivereService {
@@ -26,8 +28,8 @@ persona: Persona = new Persona();
   getConferma() {
     return this.conferma;
   }
-  getPersona(): Persona {
-    return this.persona;
+  getPersona(): Observable <Persona> {
+    return of(this.persona);
   }
   setEta(eta) {
     this.eta = eta;

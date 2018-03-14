@@ -9,14 +9,16 @@ export class HeaderComponent implements OnInit {
   id: number;
   titolo: string;
   conferma: boolean;
+  array = [];
 
   constructor() {
     this.id = 1;
     this.titolo = 'ciao';
     this.conferma = true;
+    this.array = ['uno', 'due', 'tre', 'quattro', 'cinque'];
   }
   modifica() {
-    this.conferma = false;
+    this.conferma = !this.conferma;
   }
 
   ngOnInit() {

@@ -1,5 +1,18 @@
-<p>L'id è: {{id}}</p>
+<div *ngIf="conferma">
+  <p>L'id è: {{id}}</p>
+</div>
 <p>Il titolo è: {{titolo}}</p>
 <p>Confermato: {{conferma}}</p>
+
+<table>
+    <thead>
+        <th>Elementi array</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let array of array">
+            <td>{{array}}</td>
+        </tr>
+    </tbody>
+</table>
 
 <button type="button" class="btn btn-primary" (click)="modifica()">Clicca</button>
